@@ -9,5 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/job")
 public class JobController {
     @Autowired
-    JobService Service;
+    JobService jobService;
+
+
 }
