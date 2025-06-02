@@ -19,7 +19,7 @@ public class JobEntity {
     private Long jobId;
     private String title;
     private Date salary_date;
-    private Boolean salary;
+    private Double salary;
     private String description;
 
     @ManyToOne

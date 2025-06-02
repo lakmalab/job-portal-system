@@ -2,7 +2,6 @@ package edu.icet.ecom.service;
 
 import edu.icet.ecom.model.dto.CompanyDto;
 import edu.icet.ecom.model.entity.CompanyEntity;
-import edu.icet.ecom.model.entity.JobEntity;
 import edu.icet.ecom.repository.CompanyRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
