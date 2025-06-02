@@ -2,6 +2,7 @@ package edu.icet.ecom.service;
 
 import edu.icet.ecom.model.dto.CompanyDto;
 import edu.icet.ecom.model.entity.CompanyEntity;
+import edu.icet.ecom.model.entity.JobEntity;
 import edu.icet.ecom.repository.CompanyRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,4 +29,17 @@ public class CompanyService {
     }
 
 
+    public void add(CompanyDto companyDto) {
+        companyRepository.save(mapper.map(companyDto, CompanyEntity.class));
+    }
+
+    public void update(CompanyDto companyDto) {
+        if (companyRepository.findById(companyDto.getCompanyId()).isPresent()) {
+            companyRepository.save(mapper.map(companyDto, CompanyEntity.class));
+        }
+    }
+
+    public void delete(Long id) {
+        companyRepository.deleteById(id);
+    }
 }

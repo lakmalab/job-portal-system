@@ -16,10 +16,22 @@ public class CompanyController {
 
     @GetMapping
     public List<CompanyDto> getAll(){
-        System.out.println("fer");
         return companyService.getAll();
     }
 
+    @PostMapping
+    public void add(@RequestBody CompanyDto companyDto) {
+        companyService.add(companyDto);
+    }
 
+    @PutMapping
+    public void update(@RequestBody CompanyDto companyDto) {
+        companyService.update(companyDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){
+        companyService.delete(id);
+    }
 
 }
