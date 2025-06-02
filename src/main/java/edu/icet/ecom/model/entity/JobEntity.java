@@ -1,13 +1,10 @@
 package edu.icet.ecom.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 
@@ -18,6 +15,7 @@ import java.util.Date;
 @Entity
 public class JobEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long jobId;
     private String title;
     private Date salary_date;
