@@ -8,8 +8,9 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class JobDto {
-    private Long id;
+    private Long jobId;
     private String title;
     private Date salary_date;
     private Boolean salary;

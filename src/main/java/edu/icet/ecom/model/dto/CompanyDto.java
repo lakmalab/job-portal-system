@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CompanyDto {
-    private Long id;
+    private Long companyId;
     private String name;
     private String location;
     private String industry;
