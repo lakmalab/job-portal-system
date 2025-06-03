@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/job")
+@CrossOrigin
 public class JobController {
     @Autowired
     JobService jobService;
